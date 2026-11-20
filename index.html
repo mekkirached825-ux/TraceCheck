@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TraceCheck | تدقيق خصوصية الهاتف</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#0b1020;color:#e9eefc;min-height:100vh;padding:24px}main{max-width:760px;margin:auto}.panel{background:#151d32;border:1px solid #293650;border-radius:18px;padding:22px;margin:18px 0}h1{margin:8px 0;color:#8bd5ff}p{line-height:1.8;color:#bdc9df}.tag{color:#9de5c4}input{width:100%;padding:14px;border-radius:10px;border:1px solid #52617b;background:#0d1425;color:white;font-size:16px;margin:10px 0}button{background:#66b5ff;color:#07101d;border:0;padding:13px 18px;border-radius:10px;font-weight:700;font-size:16px;cursor:pointer}.result{display:none;margin-top:18px;padding:15px;background:#10182b;border-radius:12px}li{margin:12px 0;line-height:1.7}.small{font-size:13px;color:#94a5c5}.step{border-right:3px solid #66b5ff;padding-right:12px}footer{font-size:12px;color:#91a0ba;text-align:center;margin-top:28px}
+</style></head><body><main>
+<h1>TraceCheck</h1><p class="tag">أداة توعوية لتدقيق خصوصية رقم الهاتف</p>
+<section class="panel"><h2>ابدأ التدقيق</h2><p>أدخل رقمك أو رقمًا لديك إذن صريح من صاحبه لفحصه. لا تقوم الأداة بالبحث عن الحسابات في الخدمات الخارجية.</p>
+<form id="audit"><label for="phone">رقم الهاتف</label><input id="phone" inputmode="tel" autocomplete="off" placeholder="مثال: +213..." required><button type="submit">إنشاء قائمة تدقيق</button></form>
+<div class="result" id="result"><h3>قائمة تدقيق خصوصية</h3><p id="masked"></p><ol><li class="step"><b>Google:</b> ابحث بنفسك عن الرقم داخل محرك البحث للتحقق من ظهور معلومات عامة تخصك.</li><li class="step"><b>WhatsApp:</b> افتح إعدادات الخصوصية، وراجع من يمكنه رؤية صورتك ومعلوماتك وآخر ظهور.</li><li class="step"><b>Telegram:</b> راجع إعدادات الخصوصية الخاصة برقم الهاتف، وحدد من يمكنه العثور عليك بالرقم.</li><li class="step"><b>Facebook وInstagram:</b> راجع إعدادات العثور عليك ومزامنة جهات الاتصال، وأوقفها إذا لم ترغب بها.</li><li class="step"><b>حماية الحسابات:</b> فعّل التحقق بخطوتين وتجنب نشر الرقم علنًا.</li></ol><p class="small">هذه القائمة إرشادية فقط؛ لا تؤكد وجود حسابات أو تربط الرقم بحسابات أشخاص.</p></div></section>
+<section class="panel"><h2>عن المشروع</h2><p>TraceCheck نموذج تعليمي يساعد المستخدم على مراجعة تعرض رقم هاتفه واتباع خطوات حماية الخصوصية. لا يجمع الأرقام ولا يخزنها ولا يرسلها إلى خادم.</p></section>
+<footer>TraceCheck · نموذج توعوي · البيانات لا تُرسل ولا تُحفظ</footer></main>
+<script>document.getElementById('audit').addEventListener('submit',function(e){e.preventDefault();const p=document.getElementById('phone').value.trim();if(!p)return;document.getElementById('masked').textContent='تم إعداد القائمة للرقم الذي أدخلته (لا يتم حفظ الرقم).';document.getElementById('result').style.display='block';});</script></body></html>
